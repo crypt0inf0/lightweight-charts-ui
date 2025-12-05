@@ -1,0 +1,41 @@
+.gridContainer {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    gap: 1px;
+    background-color: var(--tv-color-border);
+}
+
+.chartWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--tv-color-platform-background);
+    overflow: hidden;
+}
+
+.chartWrapper.active {
+    border: 1px solid var(--tv-color-brand);
+    z-index: 10;
+}
+
+/* Grid Layouts */
+.grid1 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.grid2 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.grid3 {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.grid4 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}

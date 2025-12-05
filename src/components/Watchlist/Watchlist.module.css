@@ -1,0 +1,200 @@
+.watchlist {
+    width: 100%;
+    height: 100%;
+    background-color: var(--tv-color-platform-background);
+    display: flex;
+    flex-direction: column;
+    color: var(--tv-color-text-primary);
+}
+
+.header {
+    padding: 10px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--tv-color-border);
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.icon {
+    color: var(--tv-color-text-secondary);
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: var(--tv-color-text-primary);
+}
+
+.tabs {
+    display: flex;
+    padding: 0 16px;
+    border-bottom: 1px solid var(--tv-color-border);
+    gap: 20px;
+}
+
+.tab {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--tv-color-text-secondary);
+    padding: 8px 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab:hover {
+    color: var(--tv-color-text-primary);
+}
+
+.activeTab {
+    color: var(--tv-color-brand);
+}
+
+.activeTab::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--tv-color-brand);
+}
+
+.columnHeaders {
+    display: flex;
+    padding: 8px 16px;
+    font-size: 11px;
+    color: var(--tv-color-text-secondary);
+    border-bottom: 1px solid var(--tv-color-border);
+}
+
+.colSymbol {
+    flex: 1;
+}
+
+.colLast {
+    width: 70px;
+    text-align: right;
+}
+
+.colChg {
+    width: 60px;
+    text-align: right;
+}
+
+.colChgP {
+    width: 60px;
+    text-align: right;
+}
+
+.list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.item {
+    display: flex;
+    padding: 8px 16px;
+    font-size: 13px;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    position: relative;
+}
+
+.item:hover {
+    background-color: var(--tv-color-toolbar-button-background-hover);
+}
+
+.item.active {
+    background-color: var(--tv-color-toolbar-button-background-hover);
+    border-left: 2px solid var(--tv-color-brand);
+}
+
+.symbolInfo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.symbolName {
+    font-weight: 500;
+}
+
+.priceInfo {
+    display: flex;
+    align-items: center;
+}
+
+.last,
+.chg,
+.chgP {
+    text-align: right;
+}
+
+.last {
+    width: 70px;
+}
+
+.chg {
+    width: 60px;
+}
+
+.chgP {
+    width: 60px;
+}
+
+.up .last,
+.up .chg,
+.up .chgP {
+    color: var(--tv-color-up);
+}
+
+.down .last,
+.down .chg,
+.down .chgP {
+    color: var(--tv-color-down);
+}
+
+.removeBtn {
+    display: none;
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--tv-color-toolbar-button-background-hover);
+    padding: 4px;
+    border-radius: 4px;
+    color: var(--tv-color-text-secondary);
+}
+
+.removeBtn:hover {
+    color: var(--tv-color-text-primary);
+    background-color: var(--tv-color-border);
+}
+
+.item:hover .removeBtn {
+    display: flex;
+}
+.columnHeaders span {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.columnHeaders span:hover {
+    color: var(--tv-color-text-primary);
+}
+
+.dragging {
+    opacity: 0.5;
+    background-color: var(--tv-color-hover-background);
+}

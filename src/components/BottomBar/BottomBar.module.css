@@ -1,0 +1,77 @@
+.bottomBar {
+    height: 32px;
+    background-color: var(--tv-color-toolbar-background);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    color: var(--tv-color-toolbar-button-text);
+    font-size: 12px;
+    user-select: none;
+}
+
+.leftSection {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.rightSection {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.timeRangeItem {
+    padding: 2px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+    color: var(--tv-color-text-secondary);
+    transition: color 0.1s, background-color 0.1s;
+}
+
+.timeRangeItem:hover {
+    color: var(--tv-color-text-primary);
+    background-color: var(--tv-color-toolbar-button-background-hover);
+}
+
+.timeRangeItem.active {
+    color: var(--tv-color-brand);
+    background-color: rgba(41, 98, 255, 0.1);
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    cursor: default;
+}
+
+.actionItem {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--tv-color-text-secondary);
+}
+
+.actionItem:hover {
+    color: var(--tv-color-brand);
+}
+
+.actionItem.active {
+    color: var(--tv-color-brand);
+}
+
+.timezone {
+    color: var(--tv-color-toolbar-button-text);
+    cursor: pointer;
+}
+
+.timezone:hover {
+    color: var(--tv-color-text-primary);
+}
+
+.separator {
+    width: 1px;
+    height: 16px;
+    background-color: var(--tv-color-border);
+}

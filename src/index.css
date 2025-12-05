@@ -1,0 +1,77 @@
+/* Dark Theme (default) */
+:root,
+[data-theme="dark"] {
+  --tv-color-platform-background: #131722;
+  --tv-color-pane-background: #131722;
+  --tv-color-toolbar-background: #131722;
+  --tv-color-toolbar-button-background-hover: #2A2E39;
+  --tv-color-toolbar-button-text: #B2B5BE;
+  --tv-color-toolbar-button-text-hover: #F0F3FA;
+  --tv-color-toolbar-button-text-active: #2962FF;
+  --tv-color-item-active-text: #2962FF;
+  --tv-color-border: #2A2E39;
+  --tv-color-text-primary: #D1D4DC;
+  --tv-color-text-secondary: #787B86;
+  --tv-color-brand: #2962FF;
+  --tv-color-up: #089981;
+  --tv-color-down: #F23645;
+  --tv-color-dropdown-background: #1e222d;
+  --tv-color-input-background: #131722;
+}
+
+/* Light Theme */
+[data-theme="light"] {
+  --tv-color-platform-background: #ffffff;
+  --tv-color-pane-background: #ffffff;
+  --tv-color-toolbar-background: #f8f9fa;
+  --tv-color-toolbar-button-background-hover: #e8e9eb;
+  --tv-color-toolbar-button-text: #434651;
+  --tv-color-toolbar-button-text-hover: #131722;
+  --tv-color-toolbar-button-text-active: #2962FF;
+  --tv-color-item-active-text: #2962FF;
+  --tv-color-border: #e0e3eb;
+  --tv-color-text-primary: #131722;
+  --tv-color-text-secondary: #787B86;
+  --tv-color-brand: #2962FF;
+  --tv-color-up: #089981;
+  --tv-color-down: #F23645;
+  --tv-color-dropdown-background: #ffffff;
+  --tv-color-input-background: #f8f9fa;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--tv-color-platform-background);
+  color: var(--tv-color-text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  /* Prevent body scroll, layout handles it */
+  height: 100vh;
+  width: 100vw;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #363A45;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4A4F5B;
+}

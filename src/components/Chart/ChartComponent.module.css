@@ -1,0 +1,108 @@
+.chartWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Shift TradingView logo when toolbar overlay is visible */
+.toolbarVisible :global([class*="tv-attr-logo"]),
+.toolbarVisible :global(a[href*="tradingview"]) {
+    transform: translateX(52px);
+    transition: transform 0.2s ease;
+}
+
+.chartContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.loadingOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--tv-color-platform-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    color: var(--tv-color-text-primary);
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-left-color: var(--tv-color-brand);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.drawingOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.axisLabelWrapper {
+    position: absolute;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 20;
+    pointer-events: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.axisLabelSymbol {
+    color: white;
+    padding: 3px 6px;
+    font-size: 11px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif;
+    border-radius: 2px;
+    margin-right: 1px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.axisLabel {
+    background-color: #F23645;
+    color: white;
+    padding: 3px 6px;
+    font-size: 11px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-width: 55px;
+    border-radius: 2px;
+    line-height: 1.2;
+}
+
+.axisLabelPrice {
+    font-weight: 600;
+}
+
+.axisLabelTimer {
+    font-size: 10px;
+    opacity: 0.9;
+}

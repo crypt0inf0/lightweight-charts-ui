@@ -1,0 +1,164 @@
+.toolbar {
+    width: 52px;
+    height: 100%;
+    background-color: var(--tv-color-toolbar-background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    overflow-y: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    z-index: 20;
+    /* Ensure it stays above chart content if needed */
+}
+
+.toolbar::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+.toolGroupContainer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2px;
+}
+
+.controlWrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 4px;
+    transition: background-color 0.1s;
+}
+
+.controlWrapper:hover {
+    background-color: var(--tv-color-toolbar-button-background-hover);
+}
+
+.toolButton {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px 0 0 4px;
+    /* Rounded left corners only */
+    cursor: pointer;
+    color: var(--tv-color-toolbar-button-text);
+    transition: all 0.1s;
+    position: relative;
+}
+
+.toolButton:hover {
+    color: var(--tv-color-toolbar-button-text-hover);
+}
+
+.toolButton.active {
+    color: var(--tv-color-toolbar-button-text-active);
+}
+
+.toolIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.toolIcon svg {
+    /* Ensure icons fit well */
+    width: 20px;
+    height: 20px;
+}
+
+.arrowButton {
+    width: 11px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--tv-color-text-secondary);
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity 0.1s, color 0.1s;
+    border-radius: 0 4px 4px 0;
+    /* Rounded right corners */
+}
+
+.controlWrapper:hover .arrowButton {
+    opacity: 1;
+}
+
+.arrowButton:hover {
+    color: var(--tv-color-toolbar-button-text-hover);
+    background-color: var(--tv-color-toolbar-button-background-hover);
+}
+
+.arrowButton svg {
+    fill: currentColor;
+    width: 6px;
+    /* Scale down the 10x16 SVG slightly if needed, or keep it */
+    height: 10px;
+}
+
+/* Popover / Flyout Menu */
+.popover {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: var(--tv-color-dropdown-background);
+    border: 1px solid var(--tv-color-border);
+    border-radius: 4px;
+    padding: 6px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    min-width: 220px;
+}
+
+.popoverItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: var(--tv-color-text-primary);
+    font-size: 13px;
+    transition: background-color 0.1s;
+}
+
+.popoverItem:hover {
+    background-color: var(--tv-color-toolbar-button-background-hover);
+}
+
+.popoverItem.active {
+    background-color: rgba(41, 98, 255, 0.06);
+    color: var(--tv-color-toolbar-button-text-active);
+}
+
+.popoverIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    color: inherit;
+}
+
+.popoverLabel {
+    white-space: nowrap;
+    font-weight: 400;
+}
+
+.separator {
+    width: 20px;
+    height: 1px;
+    background-color: var(--tv-color-border);
+    margin: 6px 0;
+    flex-shrink: 0;
+}

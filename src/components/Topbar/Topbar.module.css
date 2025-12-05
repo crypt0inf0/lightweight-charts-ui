@@ -1,0 +1,690 @@
+.layoutAreaTop {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 38px;
+    background-color: var(--tv-color-toolbar-background);
+    z-index: 1000;
+}
+
+.toolbar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.overflowWrap {
+    width: 100%;
+    height: 100%;
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 4px;
+    width: 100%;
+}
+
+.wrapOverflow {
+    flex: 1;
+    overflow: hidden;
+    height: 100%;
+}
+
+.wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.scrollWrap {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.scrollWrap::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    min-width: 100%;
+}
+
+.innerWrap {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.separatorWrap {
+    display: flex;
+    align-items: center;
+    height: 16px;
+    margin: 0 12px;
+}
+
+.separator {
+    width: 1px;
+    height: 100%;
+    background-color: var(--tv-color-border);
+}
+
+/* Buttons */
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    padding: 0 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--tv-color-toolbar-button-text);
+    transition: color 0.1s, background-color 0.1s;
+    border: none;
+    background: transparent;
+    font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.button:hover:not(:disabled) {
+    background-color: var(--tv-color-toolbar-button-background-hover);
+    color: var(--tv-color-toolbar-button-text-hover);
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.button.isActive {
+    color: var(--tv-color-toolbar-button-text-active);
+    background-color: rgba(41, 98, 255, 0.06);
+}
+
+.iconButton {
+    padding: 0;
+    width: 28px;
+}
+
+.menuButton {
+    padding: 0 2px;
+    width: 18px;
+}
+
+.text {
+    margin-left: 4px;
+    font-weight: 500;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+/* Specific Button Styles */
+.symbolButton {
+    font-weight: 600;
+    color: var(--tv-color-text-primary);
+}
+
+.symbolButton:hover {
+    background-color: var(--tv-color-toolbar-button-background-hover);
+}
+
+/* Interval Group - Wrapper for radiogroup + dropdown */
+.intervalGroup {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    position: relative;
+}
+
+/* Radio Group - Contains favorite interval buttons */
+.radioGroup {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+/* Interval Button - Individual timeframe button */
+.intervalButton {
+    padding: 0 8px;
+    min-width: 40px;
+}
+
+/* Grouped Buttons - Connected styling */
+.isGrouped {
+    border-radius: 0;
+    border-right: 1px solid var(--tv-color-border);
+}
+
+.isGrouped:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.isGrouped:last-child {
+    border-right: none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* Button Text Wrappers - Nested structure like TradingView */
+.buttonText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.value {
+    font-weight: 500;
+}
+
+/* Interval Menu Button - The dropdown arrow button */
+.intervalMenuButton {
+    border-left: 1px solid var(--tv-color-border);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* Dropdown Containers */
+.chartTypeSection,
+.indicatorBtn {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.addCustomBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+    color: var(--tv-color-brand);
+    font-size: 13px;
+    font-weight: 500;
+    border-bottom: 1px solid var(--tv-color-border);
+}
+
+.addCustomBtn:hover {
+    background-color: var(--tv-color-toolbar-button-background-hover);
+}
+
+.indicatorDropdown {
+    position: fixed;
+    background-color: var(--tv-color-dropdown-background);
+    border: 1px solid var(--tv-color-border);
+    border-radius: 4px;
+    padding: 6px 0;
+    min-width: 160px;
+    z-index: 2000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Dropdowns */
+.dropdown {
+    position: fixed;
+    background-color: var(--tv-color-dropdown-background);
+    border: 1px solid var(--tv-color-border);
+    border-radius: 4px;
+    padding: 6px 0;
+    min-width: 160px;
+    z-index: 2000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.dropdownItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 16px;
+    cursor: pointer;
+    color: var(--tv-color-text-primary);
+    font-size: 13px;
+}
+
+.dropdownItem:hover {
+    background-color: var(--tv-color-toolbar-button-background-hover);
+}
+
+.dropdownItem.active {
+    color: var(--tv-color-brand);
+    background-color: rgba(41, 98, 255, 0.06);
+}
+
+.dropdownItem.withIcon {
+    gap: 8px;
+    justify-content: flex-start;
+}
+
+.dropdownItem.withIcon .icon {
+    padding-right: 4px;
+    gap: 2px;
+}
+
+
+/* Right Section */
+.rightSection {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 4px;
+    gap: 2px;
+}
+
+.fill {
+    flex: 1;
+}
+
+/* Icons */
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Utilities */
+.hidden {
+    display: none;
+}
+
+/* Custom Input Form */
+.customInputForm {
+    padding: 10px;
+    border-bottom: 1px solid var(--tv-color-border);
+    background-color: var(--tv-color-dropdown-background);
+}
+
+.customHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.closeIcon {
+    cursor: pointer;
+    color: var(--tv-color-text-secondary);
+}
+
+.closeIcon:hover {
+    color: var(--tv-color-text-primary);
+}
+
+.customBody {
+    display: flex;
+    gap: 5px;
+}
+
+.numInput {
+    width: 50px;
+    background: var(--tv-color-input-background);
+    border: 1px solid var(--tv-color-border);
+    color: var(--tv-color-text-primary);
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.unitSelect {
+    background: var(--tv-color-input-background);
+    border: 1px solid var(--tv-color-border);
+    color: var(--tv-color-text-primary);
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.addBtn {
+    background: var(--tv-color-brand);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.addBtn:hover {
+    background: #1e53e5;
+}
+
+.scrollableList {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Collapsible Section Header */
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 16px;
+    cursor: pointer;
+    color: var(--tv-color-text-primary);
+    font-size: 13px;
+    font-weight: 500;
+    user-select: none;
+}
+
+.sectionHeader:hover {
+    background-color: var(--tv-color-toolbar-button-background-hover);
+}
+
+/* Caret Icon for Section Headers */
+.caret {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    transform: rotate(-90deg);
+}
+
+.caret.expanded {
+    transform: rotate(0deg);
+}
+
+.caret svg {
+    width: 16px;
+    height: 8px;
+}
+
+.groupSection {
+    padding: 4px 0;
+    border-bottom: 1px solid var(--tv-color-border);
+}
+
+.groupSection:last-child {
+    border-bottom: none;
+}
+
+.groupTitle {
+    padding: 4px 16px;
+    font-size: 11px;
+    color: var(--tv-color-text-secondary);
+    font-weight: 600;
+}
+
+.itemActions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.itemLabel {
+    flex: 1;
+}
+
+.starIcon {
+    color: #50535e;
+    opacity: 0;
+    transition: opacity 0.2s, color 0.2s;
+}
+
+.dropdownItem:hover .starIcon {
+    opacity: 1;
+}
+
+.starIcon.filled {
+    color: #f57c00;
+    opacity: 1;
+}
+
+
+/* Icons */
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Utilities */
+.hidden {
+    display: none;
+}
+
+/* Custom Input Form */
+.customInputForm {
+    padding: 10px;
+    border-bottom: 1px solid var(--tv-color-border);
+    background-color: var(--tv-color-dropdown-background);
+}
+
+.customHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.closeIcon {
+    cursor: pointer;
+    color: var(--tv-color-text-secondary);
+}
+
+.closeIcon:hover {
+    color: var(--tv-color-text-primary);
+}
+
+.customBody {
+    display: flex;
+    gap: 5px;
+}
+
+.numInput {
+    width: 50px;
+    background: var(--tv-color-input-background);
+    border: 1px solid var(--tv-color-border);
+    color: var(--tv-color-text-primary);
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.unitSelect {
+    background: var(--tv-color-input-background);
+    border: 1px solid var(--tv-color-border);
+    color: var(--tv-color-text-primary);
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.addBtn {
+    background: var(--tv-color-brand);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.addBtn:hover {
+    background: #1e53e5;
+}
+
+.scrollableList {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Collapsible Section Header */
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 16px;
+    cursor: pointer;
+    color: var(--tv-color-text-primary);
+    font-size: 13px;
+    font-weight: 500;
+    user-select: none;
+}
+
+.sectionHeader:hover {
+    background-color: var(--tv-color-toolbar-button-background-hover);
+}
+
+/* Caret Icon for Section Headers */
+.caret {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    transform: rotate(-90deg);
+}
+
+.caret.expanded {
+    transform: rotate(0deg);
+}
+
+.caret svg {
+    width: 16px;
+    height: 8px;
+}
+
+.groupSection {
+    padding: 4px 0;
+    border-bottom: 1px solid var(--tv-color-border);
+}
+
+.groupSection:last-child {
+    border-bottom: none;
+}
+
+.groupTitle {
+    padding: 4px 16px;
+    font-size: 11px;
+    color: var(--tv-color-text-secondary);
+    font-weight: 600;
+}
+
+.itemActions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.itemLabel {
+    flex: 1;
+}
+
+.starIcon {
+    color: #50535e;
+    opacity: 0;
+    transition: opacity 0.2s, color 0.2s;
+}
+
+.dropdownItem:hover .starIcon {
+    opacity: 1;
+}
+
+.starIcon.filled {
+    color: #f57c00;
+    opacity: 1;
+}
+
+.trashIcon {
+    color: var(--tv-color-text-secondary);
+    opacity: 0;
+}
+
+.dropdownItem:hover .trashIcon {
+    opacity: 1;
+}
+
+.trashIcon:hover {
+    color: #f44336;
+}
+
+/* Theme Toggle Button */
+.themeToggle {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.themeToggle:hover {
+    transform: scale(1.1);
+}
+
+.themeToggle svg {
+    transition: transform 0.3s ease;
+}
+
+/* Snapshot Dropdown */
+.snapshotSection {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.snapshotDropdown {
+    position: fixed;
+    background-color: var(--tv-color-dropdown-background);
+    border: 1px solid var(--tv-color-border);
+    border-radius: 4px;
+    padding: 6px 0;
+    min-width: 180px;
+    z-index: 2000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.snapshotHeader {
+    padding: 8px 16px 6px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--tv-color-text-secondary);
+    letter-spacing: 0.5px;
+}
+
+.snapshotItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    cursor: pointer;
+    color: var(--tv-color-text-primary);
+    font-size: 13px;
+}
+
+.snapshotItem:hover {
+    background-color: var(--tv-color-toolbar-button-background-hover);
+}
+
+.snapshotItem svg {
+    flex-shrink: 0;
+    color: var(--tv-color-text-secondary);
+}

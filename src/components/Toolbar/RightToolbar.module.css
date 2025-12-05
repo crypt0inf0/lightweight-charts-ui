@@ -1,0 +1,57 @@
+.toolbar {
+    width: 52px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--tv-color-pane-background);
+    border-left: 1px solid var(--tv-color-border);
+    padding-top: 4px;
+    z-index: 20;
+}
+
+.tool {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--tv-color-text-secondary);
+    transition: color 0.1s ease, background-color 0.1s ease;
+}
+
+.tool:hover {
+    color: var(--tv-color-text-primary);
+    background-color: var(--tv-color-hover-background);
+}
+
+.active {
+    color: var(--tv-color-brand);
+    background-color: var(--tv-color-background);
+}
+
+.active:hover {
+    background-color: var(--tv-color-background);
+}
+.badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: #F23645;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    min-width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3px;
+    pointer-events: none;
+    border: 1px solid var(--tv-color-pane-background);
+} 
+
+.tool {
+    position: relative;
+}

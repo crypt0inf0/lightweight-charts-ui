@@ -1,0 +1,273 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    width: 600px;
+    height: 500px;
+    background-color: var(--tv-color-dropdown-background);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.header {
+    padding: 16px;
+    border-bottom: 1px solid var(--tv-color-border);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.searchContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: var(--tv-color-toolbar-button-background-hover);
+    border-radius: 4px;
+    padding: 0 12px;
+    height: 40px;
+    border: 1px solid transparent;
+}
+
+.searchContainer:focus-within {
+    border-color: var(--tv-color-brand);
+}
+
+.searchIcon {
+    color: var(--tv-color-text-secondary);
+    margin-right: 8px;
+}
+
+.input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--tv-color-text-primary);
+    font-size: 16px;
+    outline: none;
+}
+
+.clearIcon {
+    color: var(--tv-color-text-secondary);
+    cursor: pointer;
+}
+
+.closeBtn {
+    color: var(--tv-color-text-secondary);
+    cursor: pointer;
+    padding: 4px;
+}
+
+.closeBtn:hover {
+    color: var(--tv-color-text-primary);
+}
+
+.listHeader {
+    display: flex;
+    padding: 8px 16px;
+    border-bottom: 1px solid var(--tv-color-border);
+    color: var(--tv-color-text-secondary);
+    font-size: 12px;
+}
+
+.colSymbol {
+    flex: 1;
+}
+
+.colDesc {
+    flex: 1;
+}
+
+.colExch {
+    width: 80px;
+    text-align: right;
+}
+
+.list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--tv-color-border);
+}
+
+.item:hover {
+    background-color: var(--tv-color-toolbar-button-background-hover);
+}
+
+.itemSymbol {
+    flex: 1;
+    font-weight: 600;
+    color: var(--tv-color-text-primary);
+}
+
+.quote {
+    color: var(--tv-color-text-secondary);
+    font-size: 0.8em;
+    margin-left: 4px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    width: 600px;
+    height: 500px;
+    background-color: var(--tv-color-dropdown-background);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.header {
+    padding: 16px;
+    border-bottom: 1px solid var(--tv-color-border);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.searchContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: var(--tv-color-toolbar-button-background-hover);
+    border-radius: 4px;
+    padding: 0 12px;
+    height: 40px;
+    border: 1px solid transparent;
+}
+
+.searchContainer:focus-within {
+    border-color: var(--tv-color-brand);
+}
+
+.searchIcon {
+    color: var(--tv-color-text-secondary);
+    margin-right: 8px;
+}
+
+.input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--tv-color-text-primary);
+    font-size: 16px;
+    outline: none;
+}
+
+.clearIcon {
+    color: var(--tv-color-text-secondary);
+    cursor: pointer;
+}
+
+.closeBtn {
+    color: var(--tv-color-text-secondary);
+    cursor: pointer;
+    padding: 4px;
+}
+
+.closeBtn:hover {
+    color: var(--tv-color-text-primary);
+}
+
+.listHeader {
+    display: flex;
+    padding: 8px 16px;
+    border-bottom: 1px solid var(--tv-color-border);
+    color: var(--tv-color-text-secondary);
+    font-size: 12px;
+}
+
+.colSymbol {
+    flex: 1;
+}
+
+.colDesc {
+    flex: 1;
+}
+
+.colExch {
+    width: 80px;
+    text-align: right;
+}
+
+.list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--tv-color-border);
+}
+
+.item:hover {
+    background-color: var(--tv-color-toolbar-button-background-hover);
+}
+
+.itemSymbol {
+    flex: 1;
+    font-weight: 600;
+    color: var(--tv-color-text-primary);
+}
+
+.quote {
+    color: var(--tv-color-text-secondary);
+    font-size: 0.8em;
+    margin-left: 4px;
+}
+
+.itemDesc {
+    flex: 1;
+    color: var(--tv-color-text-secondary);
+    font-size: 13px;
+}
+
+.itemExch {
+    width: 80px;
+    text-align: right;
+    color: var(--tv-color-text-secondary);
+    font-size: 12px;
+}
+
+.checkIcon {
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--tv-color-brand);
+    margin-left: 8px;
+}
