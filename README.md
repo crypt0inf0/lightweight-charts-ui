@@ -43,7 +43,9 @@ npm run preview
 ## Screenshot
 
 ![App screenshot](./chart.png)
+## Credit 
 
+Thanks to [difurious](https://github.com/difurious) for creating https://github.com/difurious/lightweight-charts-line-tools my UI is created based on this drawing tools 
 ## License
 
 MIT
